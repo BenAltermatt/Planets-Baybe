@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dc62b1c69a764ea0ab7284e8a2ef944, type: 3}
-  m_Name: New Dialogue
+  m_Name: Mars
   m_EditorClassIdentifier: 
-  sentence: []
+  sentences: []
+  responses: []
   currentImage: {fileID: 0}
   currentBackground: {fileID: 0}
   firstOption: {fileID: 0}
   secondOption: {fileID: 0}
   thirdOption: {fileID: 0}
+  curSentence: 0
