@@ -13,14 +13,17 @@ MonoBehaviour:
   m_Name: First
   m_EditorClassIdentifier: 
   sentences:
-  - {fileID: 11400000, guid: d076b003b616b4b42b42b9dbf46d542f, type: 2}
+  - "Hello world\t"
+  - Programmed to work and not to feel
+  - Not even sure that this is real
+  - Hello world...
   responses:
-  - {fileID: 11400000, guid: 6cc9c839232014b38a9df6f933f8668e, type: 2}
-  - {fileID: 11400000, guid: 5b5d15f7f5ad04f208c6d6f5878861a9, type: 2}
-  - {fileID: 11400000, guid: 65c135e48a67747fb83f528e9f47696f, type: 2}
+  - Talk to Earth
+  - Talk To Mars
+  - Talk to Pluto
+  options:
+  - {fileID: 11400000, guid: f38b1ed50053d48578f500765b8f6925, type: 2}
+  - {fileID: 11400000, guid: 2db8455679553453391bd3461e49f595, type: 2}
+  - {fileID: 11400000, guid: 96c8f8130202b43eca4d9227f8601719, type: 2}
   currentImage: {fileID: 0}
   currentBackground: {fileID: 0}
-  firstOption: {fileID: 11400000, guid: f38b1ed50053d48578f500765b8f6925, type: 2}
-  secondOption: {fileID: 11400000, guid: 2db8455679553453391bd3461e49f595, type: 2}
-  thirdOption: {fileID: 11400000, guid: 96c8f8130202b43eca4d9227f8601719, type: 2}
-  curSentence: 0

@@ -12,8 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc62b1c69a764ea0ab7284e8a2ef944, type: 3}
   m_Name: Earth
   m_EditorClassIdentifier: 
-  sentence:
-  - {fileID: 0}
+  sentences:
+  - AHHSADGAKSGHFUKGHFUSHKU
+  - 'IM ON FIRE
+
+'
+  - YOU GIYS DID THIS TO ME YOURE KILLING ME AHHHHHHHHH
+  responses:
+  - Whoops
+  - L + Ratio
+  - Amongus
   currentImage: {fileID: 0}
   currentBackground: {fileID: 0}
   firstOption: {fileID: 0}

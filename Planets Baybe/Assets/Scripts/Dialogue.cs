@@ -11,21 +11,9 @@ public class Dialogue : ScriptableObject
     [TextArea]
     public List<string> responses;
 
+    public List<Dialogue> options;
+
     public Sprite currentImage;
     public Sprite currentBackground;
 
-    public Dialogue firstOption;
-    public Dialogue secondOption;
-    public Dialogue thirdOption;
-
-    public int curSentence = 0;
-
-    public string getCurSentence()
-    {
-        string retVal = sentences[curSentence];
-        if(curSentence < sentences.Count - 1)
-            curSentence++;
-        return retVal;
-
-    }
 }
