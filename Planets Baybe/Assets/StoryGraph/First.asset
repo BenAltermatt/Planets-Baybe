@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: First
   m_EditorClassIdentifier: 
   sentences:
-  - "Hello world\t"
+  - Hello world
   - Programmed to work and not to feel
   - Not even sure that this is real
   - Hello world...
@@ -26,5 +26,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2db8455679553453391bd3461e49f595, type: 2}
   - {fileID: 11400000, guid: 96c8f8130202b43eca4d9227f8601719, type: 2}
   currentEmote: base
-  currentCharacter: {fileID: 11400000, guid: 010b09034a38c4ab6b643f37c4a79690, type: 2}
+  currentCharacter: {fileID: 11400000, guid: 23c13e58922ed4b25b63f14d9531ec55, type: 2}
   currentBackground: {fileID: 21300000, guid: 9eb187c6711d044e4b601b841e3b60fb, type: 3}
