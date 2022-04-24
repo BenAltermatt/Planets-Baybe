@@ -12,8 +12,8 @@ public class Dialogue : ScriptableObject
     public List<string> responses;
 
     public List<Dialogue> options;
-
-    public Sprite currentImage;
+    
+    public string currentEmote;
+    public Planet currentCharacter;
     public Sprite currentBackground;
-
 }

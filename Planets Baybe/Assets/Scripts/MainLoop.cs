@@ -11,6 +11,10 @@ public class MainLoop : MonoBehaviour
     public TMP_Text currentComment;
     public GameObject responseOptionSelect;
     public GameObject responseButton;
+    public GameObject talkingPanel;
+    public GameObject respondingPanel;
+    public GameObject backgroundSprite;
+    public GameObject characterSprite;
 
     // these manaage the game logic and are more hidden and only 
     // really useful to this script
@@ -91,7 +95,11 @@ public class MainLoop : MonoBehaviour
 
         }
 
+
+        backgroundSprite.GetComponent<Image>().sprite = currentDialog.currentBackground;
+        characterSprite.GetComponent<Image>().sprite = currentDialog.currentCharacter.getEmote(currentDialog.currentEmote);  
         // lets update the writing in the button fields
+        respondingPanel.SetActive(false);
         renderSentence();
     }
 
@@ -99,9 +107,16 @@ public class MainLoop : MonoBehaviour
     {
         writeTime = STDWRITE;
         writing = true;
-        StartCoroutine(RenderText(currentDialog.sentences[curSentence]));
-        if(curSentence + 1 < currentDialog.sentences.Count)
+        
+        if(curSentence < currentDialog.sentences.Count)
+        {
+            StartCoroutine(RenderText(currentDialog.sentences[curSentence]));
             curSentence++;
+        }
+        else
+        {
+            respondingPanel.SetActive(true);
+        }
     }
 
     IEnumerator RenderText(string textToRender)
