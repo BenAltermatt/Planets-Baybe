@@ -10,21 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9dc62b1c69a764ea0ab7284e8a2ef944, type: 3}
-  m_Name: First
+  m_Name: Waking Up
   m_EditorClassIdentifier: 
   sentences:
-  - Hello world
-  - Programmed to work and not to feel
-  - Not even sure that this is real
-  - Hello world...
+  - Hey there!
+  - ... Oh gosh... are you alright? You look like you took a pretty Heavy tumble.
+  - ... Hello?
   responses:
-  - Talk to Earth
-  - Talk To Mars
-  - Talk to Pluto
+  - Where am I?
+  - 'What happened? '
+  - Who are you?
   options:
-  - {fileID: 11400000, guid: f38b1ed50053d48578f500765b8f6925, type: 2}
-  - {fileID: 11400000, guid: 2db8455679553453391bd3461e49f595, type: 2}
-  - {fileID: 11400000, guid: 96c8f8130202b43eca4d9227f8601719, type: 2}
+  - {fileID: 11400000, guid: aefb8dc3c98a34e78a73cc010fc849a7, type: 2}
+  - {fileID: 11400000, guid: aefb8dc3c98a34e78a73cc010fc849a7, type: 2}
+  - {fileID: 11400000, guid: aefb8dc3c98a34e78a73cc010fc849a7, type: 2}
   currentEmote: base
   currentCharacter: {fileID: 11400000, guid: 23c13e58922ed4b25b63f14d9531ec55, type: 2}
   currentBackground: {fileID: 21300000, guid: 9eb187c6711d044e4b601b841e3b60fb, type: 3}

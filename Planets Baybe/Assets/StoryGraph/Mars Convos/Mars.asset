@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - OI
-  - I'm Mars! Nice to meetcha!
+  - What's this? An astronaut huh? Cool! I don't know if I've ever met an astronaut
+    before.
+  - I'm Mars, what can I do ya for?
   responses:
-  - Fuck you
-  - The Candy Company!?!?!
   - Sus
   options: []
   currentEmote: base

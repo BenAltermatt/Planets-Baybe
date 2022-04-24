@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc62b1c69a764ea0ab7284e8a2ef944, type: 3}
+  m_Name: You're introverter
+  m_EditorClassIdentifier: 
+  sentences:
+  - Yeah! Actually. That's a good way of putting it! I feel like a lot of people
+    tend to undervalue a little alone time.
+  - And it's not like I don't like the other planets... I guess I just feel insecure
+    sometimes.
+  - I want them to know I like them and care about them... but I get a little overloaded
+    when I am around too many people for too long, yknow?
+  responses:
+  - I'm actually personally more extroverted, but I understand!
+  options: []
+  currentEmote: happy
+  currentCharacter: {fileID: 11400000, guid: dbbebc6bec4a0456b94a8cfa8a513e3d, type: 2}
+  currentBackground: {fileID: 21300000, guid: 9eb187c6711d044e4b601b841e3b60fb, type: 3}
