@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 872b70c0f199e42249bdd2b13999028a, type: 3}
+  m_Name: Pluto
+  m_EditorClassIdentifier: 
+  emotes:
+  - {fileID: 21300000, guid: b72d1b69522ce44688617b9f140af3ea, type: 3}
+  - {fileID: 21300000, guid: ad04bbe0ade5f409ea0be38b8fe61193, type: 3}
+  - {fileID: 21300000, guid: 5723558e2989a46d5a42012c45fcc38f, type: 3}
+  - {fileID: 21300000, guid: e5f02fcc809f045dfa20fc6944ee2c5d, type: 3}

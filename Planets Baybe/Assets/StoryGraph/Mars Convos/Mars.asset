@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc62b1c69a764ea0ab7284e8a2ef944, type: 3}
+  m_Name: Mars
+  m_EditorClassIdentifier: 
+  sentences:
+  - OI
+  - What's this? An astronaut huh? Cool! I don't know if I've ever met an astronaut
+    before.
+  - I'm Mars, what can I do ya for?
+  responses:
+  - Sus
+  options: []
+  currentEmote: base
+  currentCharacter: {fileID: 11400000, guid: c7a0e8a9693e14f8a99a51881ba4304b, type: 2}
+  currentBackground: {fileID: 21300000, guid: 9eb187c6711d044e4b601b841e3b60fb, type: 3}

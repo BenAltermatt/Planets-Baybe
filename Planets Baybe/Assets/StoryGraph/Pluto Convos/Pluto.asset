@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc62b1c69a764ea0ab7284e8a2ef944, type: 3}
+  m_Name: Pluto
+  m_EditorClassIdentifier: 
+  sentences:
+  - What?
+  - An astronaut? You mean one of those nerds who flies around in the little tin
+    cans?
+  - 'Oh my gosh, you''re serious! Wow that''s hilarious. '
+  - I'm Pluto. What's up dork?
+  responses:
+  - Wow, the furthest planet from the sun!
+  - Wait, you're not a planet.
+  - What's the matter, don't like astronauts?
+  options:
+  - {fileID: 11400000, guid: 56899ba3c205a46a0a70cba007d8f106, type: 2}
+  currentEmote: base
+  currentCharacter: {fileID: 11400000, guid: dbbebc6bec4a0456b94a8cfa8a513e3d, type: 2}
+  currentBackground: {fileID: 21300000, guid: 9eb187c6711d044e4b601b841e3b60fb, type: 3}
