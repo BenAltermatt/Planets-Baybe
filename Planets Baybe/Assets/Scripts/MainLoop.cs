@@ -23,13 +23,21 @@ public class MainLoop : MonoBehaviour
     private const float STDWRITE = .05F;
     private const float FASTWRITE = .01F;
     private float writeTime = STDWRITE;
+    private const float animTimeFrames = .01F; 
+    private float speedModifier = .0015F;
+    private const float startX = -100.1011F;
+    private const float endX = 400F;
+    private const float midPoint = startX + (endX - startX) / 2;
+
 
     // this keeps track of the buttons we have in use for options
     private List<GameObject> buttons = new List<GameObject>();
+    private Planet oldPlan;
 
     // Start is called before the first frame update
     void Start()
     {
+        oldPlan = currentDialog.currentCharacter;
         updateGUI();
     }
 
@@ -55,9 +63,15 @@ public class MainLoop : MonoBehaviour
 
     public void optionClicked(int number)
     {
-        Debug.Log(number);
         // update our dialog properly
+        Planet oldPlan = currentDialog.currentCharacter;
+
         currentDialog = currentDialog.options[number];
+
+        if(oldPlan != currentDialog.currentCharacter) // character changed
+        {
+            StartCoroutine(SwapCharacter());
+        }
 
         for(int i = 0; i < buttons.Count; i++)
         {
@@ -85,7 +99,6 @@ public class MainLoop : MonoBehaviour
         // we need to make our buttons in our selection screen
         for(int i = 0; i < currentDialog.responses.Count; i++)
         {
-            Debug.Log("Current i: " + i);
             // lets start off by getting the transform of the height
             buttons.Add(Instantiate(responseButton, new Vector3(0, 0, 0), Quaternion.identity, responseOptionSelect.transform));
             buttons[i].GetComponentInChildren<TMP_Text>().text = currentDialog.responses[i];
@@ -97,7 +110,8 @@ public class MainLoop : MonoBehaviour
 
 
         backgroundSprite.GetComponent<Image>().sprite = currentDialog.currentBackground;
-        updateEmote(null);
+        if(currentDialog.currentCharacter == oldPlan)
+            updateCharModel(null);
         // lets update the writing in the button fields
         respondingPanel.SetActive(false);
         renderSentence();
@@ -115,17 +129,39 @@ public class MainLoop : MonoBehaviour
         }
     }
 
-    private void updateEmote(string emote)
+    private void updateCharModel(string emote)
     {
         if(emote != null)
             currentDialog.currentEmote = emote;
         characterSprite.GetComponent<Image>().sprite = currentDialog.currentCharacter.getEmote(currentDialog.currentEmote);  
     }
 
+    IEnumerator SwapCharacter()
+    {
+        RectTransform currentTrans = characterSprite.GetComponent<RectTransform>();
+
+
+        while(currentTrans.offsetMax.x < endX - .01)
+        {
+            currentTrans.Translate(new Vector3(-1 * speedModifier * (endX - currentTrans.offsetMax.x) * (startX - currentTrans.offsetMax.x), 0, 0));
+            yield return new WaitForSeconds(animTimeFrames);
+        }
+        currentTrans.Translate(new Vector3(endX - currentTrans.offsetMax.x, 0, 0));
+        oldPlan = currentDialog.currentCharacter;
+        updateCharModel(null);
+        while(currentTrans.offsetMax.x > startX + .01)
+        {
+            currentTrans.Translate(new Vector3(speedModifier * (endX - currentTrans.offsetMax.x) * (startX - currentTrans.offsetMax.x), 0, 0));
+            yield return new WaitForSeconds(animTimeFrames);
+        }
+        currentTrans.Translate(new Vector3(startX - currentTrans.offsetMax.x, 0, 0));
+    }
+
+
     IEnumerator RenderText(string textToRender)
     {
-        if(currentDialog.currentEmote == "base")
-            updateEmote("talking");
+        if(currentDialog.currentEmote == "base" && oldPlan == currentDialog.currentCharacter)
+            updateCharModel("talking");
 
         for(int i = 1; i < textToRender.Length + 1; i++)
         {
@@ -134,9 +170,9 @@ public class MainLoop : MonoBehaviour
         }
 
         if(currentDialog.currentEmote == "talking")
-            updateEmote("base");
+            updateCharModel("base");
 
-        if(curSentence == currentDialog.sentences.Count)
+        if(curSentence == currentDialog.sentences.Count && oldPlan == currentDialog.currentCharacter)
             respondingPanel.SetActive(true);
         
         writing = false;

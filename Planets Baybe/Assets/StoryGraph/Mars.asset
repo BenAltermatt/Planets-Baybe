@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: Mars
   m_EditorClassIdentifier: 
   sentences:
-  - 
-  responses: []
-  currentImage: {fileID: 0}
-  currentBackground: {fileID: 0}
-  firstOption: {fileID: 0}
-  secondOption: {fileID: 0}
-  thirdOption: {fileID: 0}
+  - OI
+  - I'm Mars! Nice to meetcha!
+  responses:
+  - Fuck you
+  - The Candy Company!?!?!
+  - Sus
+  options: []
+  currentEmote: base
+  currentCharacter: {fileID: 11400000, guid: c7a0e8a9693e14f8a99a51881ba4304b, type: 2}
+  currentBackground: {fileID: 21300000, guid: 9eb187c6711d044e4b601b841e3b60fb, type: 3}
