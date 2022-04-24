@@ -97,7 +97,7 @@ public class MainLoop : MonoBehaviour
 
 
         backgroundSprite.GetComponent<Image>().sprite = currentDialog.currentBackground;
-        characterSprite.GetComponent<Image>().sprite = currentDialog.currentCharacter.getEmote(currentDialog.currentEmote);  
+        updateEmote(null);
         // lets update the writing in the button fields
         respondingPanel.SetActive(false);
         renderSentence();
@@ -113,20 +113,32 @@ public class MainLoop : MonoBehaviour
             StartCoroutine(RenderText(currentDialog.sentences[curSentence]));
             curSentence++;
         }
-        else
-        {
-            respondingPanel.SetActive(true);
-        }
+    }
+
+    private void updateEmote(string emote)
+    {
+        if(emote != null)
+            currentDialog.currentEmote = emote;
+        characterSprite.GetComponent<Image>().sprite = currentDialog.currentCharacter.getEmote(currentDialog.currentEmote);  
     }
 
     IEnumerator RenderText(string textToRender)
     {
+        if(currentDialog.currentEmote == "base")
+            updateEmote("talking");
 
         for(int i = 1; i < textToRender.Length + 1; i++)
         {
             yield return new WaitForSeconds(writeTime);
             currentComment.text = textToRender.Substring(0, i);
         }
+
+        if(currentDialog.currentEmote == "talking")
+            updateEmote("base");
+
+        if(curSentence == currentDialog.sentences.Count)
+            respondingPanel.SetActive(true);
+        
         writing = false;
     }
 
